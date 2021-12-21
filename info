@@ -1,0 +1,35 @@
+Dev
+|--- Write small piece of functionality
+
+Test
+| --- Add test cases for this functionality
+| --- Test it as per these test cases
+| --- Check it with CI and coverage
+
+Master
+| --- Merge dev to master if tests are all OK
+
+Pseudocode:
+
+Given starting time, date, postcode etc.
+
+Calculate minutes required to get from Initial SoC to Final SoC.
+
+Convert starting time to minutes passed (0 <= min <= 1440)
+
+Total cost = 0
+Minutes calculated = 0
+While Minutes calculated < time required
+	If day has passed:
+		Check if new date is public holiday:
+			update surcharge
+	Is current minute in peak or off-peak:
+		Update peak Boolean
+	Calculate cost for given minute and add to total cost
+	Increase count
+
+#coverage
+coverage run --source=app --branch -m unittest test/pyunittest.py
+coverage report -m
+coverage html -d coverage_reports
+
