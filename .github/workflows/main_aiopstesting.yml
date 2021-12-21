@@ -24,8 +24,6 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m venv venv
-          source venv/bin/activate
           FLASK_APP=../main.py flask run  
       
       - name: Install dependencies
