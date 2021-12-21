@@ -26,7 +26,7 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          FLASK_APP=main.py flask run 
+          FLASK_APP=../main.py flask run  
       
       - name: Install dependencies
         run: pip install -r requirements.txt
